@@ -9,6 +9,15 @@ namespace PadawansTask9
         {
             // put your code here
             //throw new NotImplementedException();
+            if (points == null)
+            {
+                throw new ArgumentNullException();
+            }
+
+            if(range <= 0)
+            {
+                throw new ArgumentException();
+            }
             List<Point> resultList = new List<Point>();
             for (int i = 0; i < points.Length; i++)
             {
