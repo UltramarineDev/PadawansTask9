@@ -8,7 +8,16 @@ namespace PadawansTask9
         public static List<Point> GetNeighbors(Point point, int range, params Point[] points)
         {
             // put your code here
-            throw new NotImplementedException();
+            //throw new NotImplementedException();
+            List<Point> resultList = new List<Point>();
+            for (int i = 0; i < points.Length; i++)
+            {
+                if (Math.Abs(points[i].X - point.X) <= range && Math.Abs(points[i].Y - point.Y) <= range)
+                {
+                    resultList.Add(points[i]);
+                }
+            }
+            return resultList;
         }
     }
 }
